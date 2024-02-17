@@ -1,36 +1,27 @@
-# National Electoral Management (CENI - NEM)
+# CeniFront
 
-![Project Logo](link_to_logo_image.png)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
-## Project Overview
+## Development server
 
-The National Electoral Management project is a robust application developed using the .NET framework. This application aims to streamline and optimize the electoral process of a country by providing a centralized platform for transparent election management.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Key Features
+## Code scaffolding
 
-- **Candidate Management:** Recording, updating, and deleting candidate information, including personal details, political affiliations, and prior experiences.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-- **Voter Management:** Registration, verification, and deletion of voters, with a robust identity verification to ensure process integrity.
+## Build
 
-- **Election Planning:** Creation and management of electoral calendars, including defining polling dates, campaign periods, and registration deadlines.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-- **Electronic Voting:** Implementation of a secure electronic voting system, ensuring confidentiality and accuracy of results.
+## Running unit tests
 
-- **Results Analysis:** Advanced features for real-time analysis of electoral results, with intuitive dashboards and detailed reports.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Technologies Used
+## Running end-to-end tests
 
-- **Programming Language:** C#
-- **Framework:** .NET Core
-- **Database:** Microsoft SQL Server
-- **User Interface:** ASP.NET MVC, Vue
-- **Serverless Computing:** Azure Functions
-- **Security:** Advanced cryptography, Multi-level authentication
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Contribution
+## Further help
 
-We welcome any contributions, whether in the form of bug reports, feature enhancements, or feedback. Check our [Contribution Guide](link_to_contrib_guide.md) for more information.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE.md) - see the license file for more details.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
