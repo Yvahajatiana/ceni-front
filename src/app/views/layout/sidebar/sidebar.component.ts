@@ -16,6 +16,7 @@ import {
   PerfectScrollbarConfigInterface,
   PerfectScrollbarModule,
 } from 'ngx-om-perfect-scrollbar';
+import { FeahterIconModule } from '../../../core/feather-icon/feather-icon.module';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -24,7 +25,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [RouterModule, CommonModule, PerfectScrollbarModule],
+  imports: [
+    RouterModule,
+    CommonModule,
+    PerfectScrollbarModule,
+    FeahterIconModule,
+  ],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
@@ -172,11 +178,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
           </ng-container>
           <li class="nav-item nav-category">Docs</li>
           <li class="nav-item">
-            <a
-              href="https://www.nobleui.com/angular/documentation/docs.html"
-              target="_blank"
-              class="nav-link"
-            >
+            <a href="#" target="_blank" class="nav-link">
               <i class="link-icon" data-feather="hash" appFeatherIcon></i>
               <span class="link-title">Documentation</span>
             </a>
@@ -195,7 +197,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         >
           <i class="icon feather icon-settings"></i>
         </a>
-        <h6 class="text-muted">Sidebar:</h6>
+        <h6 class="text-muted">Theme setting:</h6>
         <div class="form-group border-bottom">
           <div class="form-check form-check-inline">
             <label class="form-check-label">
@@ -226,22 +228,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
               Dark
             </label>
           </div>
-        </div>
-        <div class="theme-wrapper">
-          <h6 class="text-muted mb-2">Light Theme:</h6>
-          <a
-            class="theme-item active"
-            href="https://www.nobleui.com/angular/template/demo1/"
-          >
-            <img src="assets/images/screenshots/light.jpg" alt="light theme" />
-          </a>
-          <h6 class="text-muted mb-2">Dark Theme:</h6>
-          <a
-            class="theme-item"
-            href="https://www.nobleui.com/angular/template/demo2/"
-          >
-            <img src="assets/images/screenshots/dark.jpg" alt="dark theme" />
-          </a>
         </div>
       </div>
     </nav>

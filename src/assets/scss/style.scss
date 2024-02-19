@@ -1,15 +1,13 @@
 
 // Booststrap functions and variables
-//@import '~bootstrap/scss/functions';
-@import 'bootstrap/scss/_functions.scss';
-//@import '~bootstrap/scss/variables';
-@import 'bootstrap/scss/_variables.scss';
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
 
 // Template variables
-@import './_variables.scss';
+@import './variables';
 
 // Bootstrap main SCSS
-@import 'bootstrap/scss/bootstrap.scss';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
 
 // Template mixins
 @import './mixins/animation';
@@ -75,29 +73,13 @@
 @import "./components/email/email-compose";
 
 // Plugin styles
-@import '~perfect-scrollbar/css/perfect-scrollbar.css';
-@import "~highlight.js/styles/googlecode.css";
-// @import url("//at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css"); //(feather-font). github https://github.com/AT-UI/feather-font
+@import '../../../node_modules/perfect-scrollbar/css/perfect-scrollbar.css';
+@import url("//at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css"); //(feather-font). github https://github.com/AT-UI/feather-font
 @import "../fonts/feather/style.css";
-@import "~flag-icon-css/css/flag-icon.min.css";
-@import "~@mdi/font/css/materialdesignicons.min.css";
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
-@import '~animate.css/animate.min.css';
-@import '~@fullcalendar/common/main.min.css';
-@import '~@fullcalendar/daygrid/main.min.css';
-@import '~@fullcalendar/timegrid/main.min.css';
-@import "~@ng-select/ng-select/themes/default.theme.css";
-@import '~simplemde/dist/simplemde.min.css';
-@import "~metismenujs/scss/metismenujs";
-@import '~dropzone/dist/min/dropzone.min.css';
-@import '~quill/dist/quill.snow.css';
-@import '~angular-archwizard/archwizard.css';
-@import '~simple-datatables/dist/style.css';
-@import '~@swimlane/ngx-datatable/index.css';
-@import '~@swimlane/ngx-datatable/themes/bootstrap.css';
-@import '~@swimlane/ngx-datatable/assets/icons.css';
-
+@import "../../../node_modules/flag-icons/css/flag-icons.min.css";
+@import "../../../node_modules/@mdi/font/css/materialdesignicons.min.css";
+@import "../../../node_modules/@ng-select/ng-select/themes/default.theme.css";
+@import "../../../node_modules/metismenujs/scss/metismenujs";
 
 // Plugin overrides
 @import "./components/plugin-overrides/full-calendar";

@@ -23,8 +23,8 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/assets/scss/style.scss", "src/styles.scss"],
-            "scripts": []
+            "styles": ["src/styles.scss", "src/assets/scss/style.scss"],
+            "scripts": ["node_modules/feather-icons/dist/feather.js"]
           },
           "configurations": {
             "production": {
@@ -45,7 +45,8 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "outputHashing": "media"
             }
           },
           "defaultConfiguration": "production"

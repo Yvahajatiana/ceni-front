@@ -1,11 +1,12 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [NgbDropdownModule],
   template: `
     <nav class="navbar">
       <a href="" class="sidebar-toggler" (click)="toggleSidebar($event)">
@@ -35,7 +36,7 @@ import { Router } from '@angular/router';
               id="languageDropdown"
               role="button"
             >
-              <i class="flag-icon flag-icon-us mt-1" title="us"></i>
+              <i class="fi fi-us mt-1" title="us"></i>
               <span
                 class="font-weight-medium ml-1 mr-1 d-none d-md-inline-block"
                 >English</span
@@ -43,24 +44,16 @@ import { Router } from '@angular/router';
             </a>
             <div ngbDropdownMenu aria-labelledby="languageDropdown">
               <a ngbDropdownItem class="py-2"
-                ><i class="flag-icon flag-icon-us" title="us" id="us"></i>
+                ><i class="fi fi-us" title="us" id="us"></i>
                 <span class="ml-1"> English </span></a
               >
               <a ngbDropdownItem class="py-2"
-                ><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i>
-                <span class="ml-1"> French </span></a
+                ><i class="fi fi-fr" title="fr" id="fr"></i>
+                <span class="ml-1"> Français </span></a
               >
               <a ngbDropdownItem class="py-2"
-                ><i class="flag-icon flag-icon-de" title="de" id="de"></i>
-                <span class="ml-1"> German </span></a
-              >
-              <a ngbDropdownItem class="py-2"
-                ><i class="flag-icon flag-icon-pt" title="pt" id="pt"></i>
-                <span class="ml-1"> Portuguese </span></a
-              >
-              <a ngbDropdownItem class="py-2"
-                ><i class="flag-icon flag-icon-es" title="es" id="es"></i>
-                <span class="ml-1"> Spanish </span></a
+                ><i class="fi fi-mg" title="de" id="de"></i>
+                <span class="ml-1"> Malagasy </span></a
               >
             </div>
           </li>
@@ -72,26 +65,22 @@ import { Router } from '@angular/router';
               <div
                 class="dropdown-header d-flex align-items-center justify-content-between"
               >
-                <p class="mb-0 font-weight-medium">Web Apps</p>
+                <p class="mb-0 font-weight-medium">My applications</p>
                 <a href="" (click)="(false)" class="text-muted">Edit</a>
               </div>
               <div class="dropdown-body">
                 <div class="d-flex align-items-center apps">
                   <a routerLink="/apps/chat"
-                    ><i class="feather icon-message-square"></i>
-                    <p>Chat</p></a
+                    ><i class="feather icon-list"></i>
+                    <p>List</p></a
                   >
                   <a routerLink="/apps/calendar"
-                    ><i class="feather icon-calendar"></i>
-                    <p>Calendar</p></a
+                    ><i class="feather icon-users"></i>
+                    <p>Candidates</p></a
                   >
                   <a routerLink="/apps/email/inbox"
                     ><i class="feather icon-mail"></i>
-                    <p>Email</p></a
-                  >
-                  <a routerLink="/general/profile"
-                    ><i class="feather icon-instagram"></i>
-                    <p>Profile</p></a
+                    <p>Election</p></a
                   >
                 </div>
               </div>
@@ -110,7 +99,7 @@ import { Router } from '@angular/router';
               <div
                 class="dropdown-header d-flex align-items-center justify-content-between"
               >
-                <p class="mb-0 font-weight-medium">9 New Messages</p>
+                <p class="mb-0 font-weight-medium">1 New Message</p>
                 <a href="" (click)="(false)" class="text-muted">Clear all</a>
               </div>
               <div class="dropdown-body">
@@ -122,66 +111,10 @@ import { Router } from '@angular/router';
                     <div
                       class="d-flex justify-content-between align-items-center"
                     >
-                      <p>Leonardo Payne</p>
-                      <p class="sub-text text-muted">2 min ago</p>
-                    </div>
-                    <p class="sub-text text-muted">Project status</p>
-                  </div>
-                </a>
-                <a href="" (click)="(false)" class="dropdown-item">
-                  <div class="figure">
-                    <img src="https://via.placeholder.com/30x30" alt="userr" />
-                  </div>
-                  <div class="content">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <p>Carl Henson</p>
-                      <p class="sub-text text-muted">30 min ago</p>
-                    </div>
-                    <p class="sub-text text-muted">Client meeting</p>
-                  </div>
-                </a>
-                <a href="" (click)="(false)" class="dropdown-item">
-                  <div class="figure">
-                    <img src="https://via.placeholder.com/30x30" alt="userr" />
-                  </div>
-                  <div class="content">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <p>Jensen Combs</p>
-                      <p class="sub-text text-muted">1 hrs ago</p>
-                    </div>
-                    <p class="sub-text text-muted">Project updates</p>
-                  </div>
-                </a>
-                <a href="" (click)="(false)" class="dropdown-item">
-                  <div class="figure">
-                    <img src="https://via.placeholder.com/30x30" alt="userr" />
-                  </div>
-                  <div class="content">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <p>Amiah Burton</p>
+                      <p>Razafy Nirina</p>
                       <p class="sub-text text-muted">2 hrs ago</p>
                     </div>
                     <p class="sub-text text-muted">Project deadline</p>
-                  </div>
-                </a>
-                <a href="" (click)="(false)" class="dropdown-item">
-                  <div class="figure">
-                    <img src="https://via.placeholder.com/30x30" alt="userr" />
-                  </div>
-                  <div class="content">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <p>Yaretzi Mayo</p>
-                      <p class="sub-text text-muted">5 hr ago</p>
-                    </div>
-                    <p class="sub-text text-muted">New record</p>
                   </div>
                 </a>
               </div>
@@ -203,7 +136,7 @@ import { Router } from '@angular/router';
               <div
                 class="dropdown-header d-flex align-items-center justify-content-between"
               >
-                <p class="mb-0 font-weight-medium">6 New Notifications</p>
+                <p class="mb-0 font-weight-medium">1 New Notification</p>
                 <a href="" (click)="(false)" class="text-muted">Clear all</a>
               </div>
               <div class="dropdown-body">
@@ -212,44 +145,8 @@ import { Router } from '@angular/router';
                     <i class="feather icon-user-plus"></i>
                   </div>
                   <div class="content">
-                    <p>New customer registered</p>
+                    <p>New update available</p>
                     <p class="sub-text text-muted">2 sec ago</p>
-                  </div>
-                </a>
-                <a href="" (click)="(false)" class="dropdown-item">
-                  <div class="icon">
-                    <i class="feather icon-gift"></i>
-                  </div>
-                  <div class="content">
-                    <p>New Order Recieved</p>
-                    <p class="sub-text text-muted">30 min ago</p>
-                  </div>
-                </a>
-                <a href="" (click)="(false)" class="dropdown-item">
-                  <div class="icon">
-                    <i class="feather icon-alert-circle"></i>
-                  </div>
-                  <div class="content">
-                    <p>Server Limit Reached!</p>
-                    <p class="sub-text text-muted">1 hrs ago</p>
-                  </div>
-                </a>
-                <a href="" (click)="(false)" class="dropdown-item">
-                  <div class="icon">
-                    <i class="feather icon-layers"></i>
-                  </div>
-                  <div class="content">
-                    <p>Apps are ready for update</p>
-                    <p class="sub-text text-muted">5 hrs ago</p>
-                  </div>
-                </a>
-                <a href="" (click)="(false)" class="dropdown-item">
-                  <div class="icon">
-                    <i class="feather icon-download"></i>
-                  </div>
-                  <div class="content">
-                    <p>Download completed</p>
-                    <p class="sub-text text-muted">6 hrs ago</p>
                   </div>
                 </a>
               </div>
@@ -272,9 +169,11 @@ import { Router } from '@angular/router';
                   <img src="https://via.placeholder.com/80x80" alt="" />
                 </div>
                 <div class="info text-center">
-                  <p class="name font-weight-bold mb-0">{{ 'Amiah Burton' }}</p>
+                  <p class="name font-weight-bold mb-0">
+                    {{ 'Razafy Nirina' }}
+                  </p>
                   <p class="email text-muted mb-3">
-                    {{ 'amiahburton@gmail.com' }}
+                    {{ 'razafynirina@ceni.gov' }}
                   </p>
                 </div>
               </div>
