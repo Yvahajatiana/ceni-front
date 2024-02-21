@@ -28,6 +28,12 @@ export const MENU: MenuItem[] = [
     label: 'Electoral List',
     icon: 'list',
     link: '/electoral-list',
+    subItems: [
+      {
+        label: 'Registration',
+        link: '/elector/registration',
+      },
+    ],
   },
   {
     label: 'Candidates Management',
