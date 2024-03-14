@@ -34,3 +34,4 @@ We welcome any contributions, whether in the form of bug reports, feature enhanc
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md) - see the license file for more details.
+<a href="https://app.daily.dev/hajatianayva"><img src="https://api.daily.dev/devcards/v2/I6dkrNyk7IyXvlhHg1Xff.png?r=d81" width="356" alt="Hajatiana Yva's Dev Card"/></a>
